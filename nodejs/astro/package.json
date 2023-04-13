@@ -1,0 +1,35 @@
+{
+  "name": "@mcasaresmdevz/nlc-astro",
+  "version": "0.0.4",
+  "description": "A library with astro components and layouts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/*",
+    "src/*",
+    "!src/**/*.spec.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcasaresmdevz/nl-universal-01/nlc-astro.git"
+  },
+  "keywords": [
+    "library",
+    "typescript"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "cp-astro-components": "cp -r src/components dist",
+    "build": "rm -rf dist && mkdir dist && npm run cp-astro-components && tsc",
+    "upgrade-major": "npm version major",
+    "upgrade-minor": "npm version minor",
+    "upgrade-patch": "npm version patch",
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "MIT"
+}

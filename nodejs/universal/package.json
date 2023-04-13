@@ -1,0 +1,53 @@
+{
+  "name": "@mcasaresmdevz/nlc-universal",
+  "version": "1.2.9",
+  "description": "A library for universal usage",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/*",
+    "src/*",
+    "!src/**/*.spec.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcasaresmdevz/nl-universal-01/nlc-universal.git"
+  },
+  "keywords": [
+    "library",
+    "typescript"
+  ],
+  "dependencies": {
+    "@mozilla/readability": "^0.4.2",
+    "dompurify": "^3.0.1",
+    "drizzle-orm": "^0.22.0",
+    "jsdom": "^21.1.1",
+    "markmap-lib": "^0.11.6",
+    "markmap-view": "^0.2.6",
+    "mdast": "^3.0.0",
+    "mdast-util-mdx-jsx": "^2.1.2",
+    "postgres": "^3.3.4",
+    "reading-time": "^1.5.0",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2",
+    "vfile": "^5.3.7",
+    "vitest": "^0.28.5",
+    "yaml": "^2.2.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^2.4.0",
+    "@types/jsdom": "^21.1.0",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "upgrade-major": "npm version major",
+    "upgrade-minor": "npm version minor",
+    "upgrade-patch": "npm version patch",
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,56 @@
+name: Node.js Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          path: nodejs/universal
+          node-version: 16
+      - run: cd nodejs/universal && npm ci
+      - run: cd nodejs/universal && npm test
+
+  publish-universal:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          path: nodejs/universal
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: cd nodejs/universal && echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+      - run: cd nodejs/universal && npm ci
+      - run: cd nodejs/universal && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-astro:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          path: nodejs/astro
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: cd nodejs/astro && echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+      - run: cd nodejs/astro && npm ci
+      - run: cd nodejs/astro && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
