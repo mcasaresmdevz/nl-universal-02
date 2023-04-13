@@ -1,6 +1,6 @@
 {
   "name": "@mcasaresmdevz/nlc-universal",
-  "version": "1.2.9",
+  "version": "1.2.11",
   "description": "A library for universal usage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
