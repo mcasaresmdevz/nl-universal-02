@@ -1,5 +1,5 @@
 {
-  "name": "@mcasaresmdevz/nlc-astrotest",
+  "name": "@mcasaresmdevz/nlc-astro",
   "version": "0.0.4",
   "description": "A library with astro components and layouts",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcasaresmdevz/nl-universal-02/nlc-astrotest.git"
+    "url": "git+https://github.com/mcasaresmdevz/nl-universal-02/nlc-astro.git"
   },
   "keywords": [
     "library",
