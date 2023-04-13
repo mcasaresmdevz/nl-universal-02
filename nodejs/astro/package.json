@@ -1,6 +1,6 @@
 {
   "name": "@mcasaresmdevz/nlc-astro",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A library with astro components and layouts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
