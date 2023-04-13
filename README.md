@@ -200,7 +200,7 @@ To get started, add the files that should be located at the root level of the `a
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcasaresmdevz/nl-universal-01/nlc-astro.git"
+    "url": "git+https://github.com/mcasaresmdevz/nl-universal-02/nlc-astro.git"
   },
   "keywords": [
     "library",
